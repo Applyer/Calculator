@@ -46,6 +46,8 @@
             this.dot = new System.Windows.Forms.Button();
             this.c = new System.Windows.Forms.Button();
             this.equal = new System.Windows.Forms.Button();
+            this.pow = new System.Windows.Forms.Button();
+            this.res = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -264,11 +266,37 @@
             this.equal.UseVisualStyleBackColor = false;
             this.equal.Click += new System.EventHandler(this.equal_Click);
             // 
+            // pow
+            // 
+            this.pow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pow.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.pow.Location = new System.Drawing.Point(433, 267);
+            this.pow.Name = "pow";
+            this.pow.Size = new System.Drawing.Size(75, 75);
+            this.pow.TabIndex = 18;
+            this.pow.Text = "^";
+            this.pow.UseVisualStyleBackColor = false;
+            this.pow.Click += new System.EventHandler(this.pow_Click);
+            // 
+            // res
+            // 
+            this.res.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.res.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.res.Location = new System.Drawing.Point(433, 175);
+            this.res.Name = "res";
+            this.res.Size = new System.Drawing.Size(75, 75);
+            this.res.TabIndex = 19;
+            this.res.Text = "%";
+            this.res.UseVisualStyleBackColor = false;
+            this.res.Click += new System.EventHandler(this.res_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 471);
+            this.Controls.Add(this.res);
+            this.Controls.Add(this.pow);
             this.Controls.Add(this.equal);
             this.Controls.Add(this.c);
             this.Controls.Add(this.dot);
@@ -288,7 +316,7 @@
             this.Controls.Add(this.n1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "v";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,6 +342,8 @@
         private System.Windows.Forms.Button dot;
         private System.Windows.Forms.Button c;
         private System.Windows.Forms.Button equal;
+        private System.Windows.Forms.Button pow;
+        private System.Windows.Forms.Button res;
     }
 }
 
