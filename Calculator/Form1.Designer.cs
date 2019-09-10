@@ -48,6 +48,7 @@
             this.equal = new System.Windows.Forms.Button();
             this.pow = new System.Windows.Forms.Button();
             this.res = new System.Windows.Forms.Button();
+            this.trans = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -290,11 +291,25 @@
             this.res.UseVisualStyleBackColor = false;
             this.res.Click += new System.EventHandler(this.res_Click);
             // 
+            // trans
+            // 
+            this.trans.BackColor = System.Drawing.Color.Gray;
+            this.trans.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.trans.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.trans.Location = new System.Drawing.Point(433, 84);
+            this.trans.Name = "trans";
+            this.trans.Size = new System.Drawing.Size(75, 75);
+            this.trans.TabIndex = 20;
+            this.trans.Text = "!";
+            this.trans.UseVisualStyleBackColor = false;
+            this.trans.Click += new System.EventHandler(this.trans_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 471);
+            this.Controls.Add(this.trans);
             this.Controls.Add(this.res);
             this.Controls.Add(this.pow);
             this.Controls.Add(this.equal);
@@ -344,6 +359,7 @@
         private System.Windows.Forms.Button equal;
         private System.Windows.Forms.Button pow;
         private System.Windows.Forms.Button res;
+        private System.Windows.Forms.Button trans;
     }
 }
 

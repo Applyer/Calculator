@@ -20,6 +20,7 @@ namespace Calculator
         bool errorMsg = false;  // エラーメッセージが出たフラグ
         bool endPut = false;   // 入力終了時フラグ
         bool equalContinu = false; // 連続でイコールが押された
+        bool transNow = false;
 
         public Form1()
         {
@@ -323,6 +324,23 @@ namespace Calculator
             // 入力終了時
             endPut = true;
             equalContinu = true;
+        }
+
+        // !をクリックした時
+        private void trans_Click(object sender, EventArgs e)
+        {
+            if (!transNow)
+            {
+                this.TransparencyKey = Color.FromKnownColor(KnownColor.Control);
+                this.AllowTransparency = true;
+                transNow = true;
+            }
+            else
+            {
+                this.TransparencyKey = Color.FromKnownColor(KnownColor.Control);
+                this.AllowTransparency = false;
+                transNow = false;
+            }
         }
     }
 }
