@@ -20,7 +20,7 @@ namespace Calculator
         bool errorMsg = false;  // エラーメッセージが出たフラグ
         bool endPut = false;   // 入力終了時フラグ
         bool equalContinu = false; // 連続でイコールが押された
-        bool transNow = false;
+        bool transNow = false;  // 透明化フラグ
 
         public Form1()
         {
@@ -329,6 +329,7 @@ namespace Calculator
         // !をクリックした時
         private void trans_Click(object sender, EventArgs e)
         {
+            // 透明でない場合透明にする
             if (!transNow)
             {
                 this.TransparencyKey = Color.FromKnownColor(KnownColor.Control);

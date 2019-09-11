@@ -55,10 +55,10 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Info;
             this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(17, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(534, 42);
+            this.textBox1.Size = new System.Drawing.Size(455, 42);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -67,7 +67,7 @@
             // 
             this.n1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n1.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n1.Location = new System.Drawing.Point(46, 267);
+            this.n1.Location = new System.Drawing.Point(17, 257);
             this.n1.Name = "n1";
             this.n1.Size = new System.Drawing.Size(75, 75);
             this.n1.TabIndex = 1;
@@ -79,7 +79,7 @@
             // 
             this.n2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n2.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n2.Location = new System.Drawing.Point(140, 267);
+            this.n2.Location = new System.Drawing.Point(112, 257);
             this.n2.Name = "n2";
             this.n2.Size = new System.Drawing.Size(75, 75);
             this.n2.TabIndex = 2;
@@ -91,7 +91,7 @@
             // 
             this.n3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n3.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n3.Location = new System.Drawing.Point(236, 267);
+            this.n3.Location = new System.Drawing.Point(207, 257);
             this.n3.Name = "n3";
             this.n3.Size = new System.Drawing.Size(75, 75);
             this.n3.TabIndex = 3;
@@ -103,7 +103,7 @@
             // 
             this.n4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n4.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n4.Location = new System.Drawing.Point(46, 175);
+            this.n4.Location = new System.Drawing.Point(17, 162);
             this.n4.Name = "n4";
             this.n4.Size = new System.Drawing.Size(75, 75);
             this.n4.TabIndex = 4;
@@ -115,7 +115,7 @@
             // 
             this.n5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n5.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n5.Location = new System.Drawing.Point(140, 175);
+            this.n5.Location = new System.Drawing.Point(112, 162);
             this.n5.Name = "n5";
             this.n5.Size = new System.Drawing.Size(75, 75);
             this.n5.TabIndex = 5;
@@ -127,7 +127,7 @@
             // 
             this.n6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n6.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n6.Location = new System.Drawing.Point(236, 175);
+            this.n6.Location = new System.Drawing.Point(207, 162);
             this.n6.Name = "n6";
             this.n6.Size = new System.Drawing.Size(75, 75);
             this.n6.TabIndex = 6;
@@ -139,7 +139,7 @@
             // 
             this.n7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n7.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n7.Location = new System.Drawing.Point(46, 84);
+            this.n7.Location = new System.Drawing.Point(17, 67);
             this.n7.Name = "n7";
             this.n7.Size = new System.Drawing.Size(75, 75);
             this.n7.TabIndex = 7;
@@ -151,7 +151,7 @@
             // 
             this.n8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n8.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n8.Location = new System.Drawing.Point(140, 84);
+            this.n8.Location = new System.Drawing.Point(112, 67);
             this.n8.Name = "n8";
             this.n8.Size = new System.Drawing.Size(75, 75);
             this.n8.TabIndex = 8;
@@ -163,7 +163,7 @@
             // 
             this.n9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n9.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n9.Location = new System.Drawing.Point(236, 84);
+            this.n9.Location = new System.Drawing.Point(207, 67);
             this.n9.Name = "n9";
             this.n9.Size = new System.Drawing.Size(75, 75);
             this.n9.TabIndex = 9;
@@ -175,7 +175,7 @@
             // 
             this.n0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.n0.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.n0.Location = new System.Drawing.Point(140, 359);
+            this.n0.Location = new System.Drawing.Point(112, 352);
             this.n0.Name = "n0";
             this.n0.Size = new System.Drawing.Size(75, 75);
             this.n0.TabIndex = 10;
@@ -187,7 +187,7 @@
             // 
             this.add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.add.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.add.Location = new System.Drawing.Point(334, 84);
+            this.add.Location = new System.Drawing.Point(302, 67);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(75, 75);
             this.add.TabIndex = 11;
@@ -199,7 +199,7 @@
             // 
             this.sub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.sub.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.sub.Location = new System.Drawing.Point(334, 175);
+            this.sub.Location = new System.Drawing.Point(302, 162);
             this.sub.Name = "sub";
             this.sub.Size = new System.Drawing.Size(75, 75);
             this.sub.TabIndex = 12;
@@ -211,7 +211,7 @@
             // 
             this.mul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.mul.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.mul.Location = new System.Drawing.Point(334, 267);
+            this.mul.Location = new System.Drawing.Point(302, 257);
             this.mul.Name = "mul";
             this.mul.Size = new System.Drawing.Size(75, 75);
             this.mul.TabIndex = 13;
@@ -223,7 +223,7 @@
             // 
             this.div.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.div.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.div.Location = new System.Drawing.Point(334, 359);
+            this.div.Location = new System.Drawing.Point(302, 352);
             this.div.Name = "div";
             this.div.Size = new System.Drawing.Size(75, 75);
             this.div.TabIndex = 14;
@@ -235,7 +235,7 @@
             // 
             this.dot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dot.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dot.Location = new System.Drawing.Point(236, 359);
+            this.dot.Location = new System.Drawing.Point(207, 352);
             this.dot.Name = "dot";
             this.dot.Size = new System.Drawing.Size(75, 75);
             this.dot.TabIndex = 15;
@@ -247,7 +247,7 @@
             // 
             this.c.BackColor = System.Drawing.Color.White;
             this.c.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.c.Location = new System.Drawing.Point(46, 359);
+            this.c.Location = new System.Drawing.Point(17, 352);
             this.c.Name = "c";
             this.c.Size = new System.Drawing.Size(75, 75);
             this.c.TabIndex = 16;
@@ -259,7 +259,7 @@
             // 
             this.equal.BackColor = System.Drawing.Color.SkyBlue;
             this.equal.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.equal.Location = new System.Drawing.Point(433, 359);
+            this.equal.Location = new System.Drawing.Point(397, 352);
             this.equal.Name = "equal";
             this.equal.Size = new System.Drawing.Size(75, 75);
             this.equal.TabIndex = 17;
@@ -271,7 +271,7 @@
             // 
             this.pow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.pow.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.pow.Location = new System.Drawing.Point(433, 267);
+            this.pow.Location = new System.Drawing.Point(397, 257);
             this.pow.Name = "pow";
             this.pow.Size = new System.Drawing.Size(75, 75);
             this.pow.TabIndex = 18;
@@ -283,7 +283,7 @@
             // 
             this.res.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.res.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.res.Location = new System.Drawing.Point(433, 175);
+            this.res.Location = new System.Drawing.Point(397, 162);
             this.res.Name = "res";
             this.res.Size = new System.Drawing.Size(75, 75);
             this.res.TabIndex = 19;
@@ -296,7 +296,7 @@
             this.trans.BackColor = System.Drawing.Color.Gray;
             this.trans.Font = new System.Drawing.Font("MS UI Gothic", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.trans.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.trans.Location = new System.Drawing.Point(433, 84);
+            this.trans.Location = new System.Drawing.Point(397, 67);
             this.trans.Name = "trans";
             this.trans.Size = new System.Drawing.Size(75, 75);
             this.trans.TabIndex = 20;
@@ -308,7 +308,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 471);
+            this.ClientSize = new System.Drawing.Size(491, 443);
             this.Controls.Add(this.trans);
             this.Controls.Add(this.res);
             this.Controls.Add(this.pow);
@@ -331,7 +331,7 @@
             this.Controls.Add(this.n1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "v";
+            this.Text = "my first calculator using windows form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
