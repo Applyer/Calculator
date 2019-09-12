@@ -14,6 +14,7 @@ namespace Calculator
     {
         double FirstNumber;  // 最初の数値
         double SecondNmber;  // 次の数値
+        double OperatedNum;  // 最後の数値
         string NowNumber;   // 入力中の数値
         string Operation;   // 演算子
         bool dotCheck = false;  // "."が押されたフラグ
@@ -21,6 +22,9 @@ namespace Calculator
         bool endPut = false;   // 入力終了時フラグ
         bool equalContinu = false; // 連続でイコールが押された
         bool transNow = false;  // 透明化フラグ
+        bool firstNChek = false; // 最初の数値に値があるか？
+        bool secondNChek = false; // 次の数値に値があるか？
+        bool operatedNChek = false; // 最後の数値に値があるか？
 
         public Form1()
         {
@@ -54,16 +58,125 @@ namespace Calculator
         // 演算子が押された時の裏処理
         public void OperatorClick()
         {
-            // 最初の数値をダブル型に変換
-            FirstNumber = Convert.ToDouble(textBox1.Text);
+            // 最初の数値に値があるなら
+            if (firstNChek)
+            {
+                OperatMain();
+            }
+            // 最初の数値が空なら
+            if (!firstNChek && !errorMsg)
+            {
+                // 最初の数値をダブル型に変換
+                FirstNumber = Convert.ToDouble(textBox1.Text);
+                firstNChek = true;
+                errorMsg = false;
+            }
 
             // 一部フラグの初期化
             dotCheck = false;
-            errorMsg = false;
             equalContinu = false;
 
             // 入力終了
             endPut = true;
+        }
+
+        // 次の数値を入力するか？
+        public void NextNum()
+        {
+            // 連続でイコールが押されているか？エラーは出ているか？
+            if (equalContinu && !errorMsg)
+            {
+                // 表示されいる数値をダブル型に変換し最初の数値に代入
+                FirstNumber = Convert.ToDouble(textBox1.Text);
+            }
+            else if (!errorMsg && !secondNChek) // エラーが出ているか？
+            {
+                // 表示されいる数値をダブル型に変換し次の数値に代入
+                SecondNmber = Convert.ToDouble(textBox1.Text);
+                secondNChek = true;
+            }
+        }
+
+        // エラーが出た
+        public void ErrorMessage()
+        {
+            // エラー時のフラグや処理
+        }
+
+        // 演算のメイン
+        public void OperatMain()
+        {
+            NextNum();
+
+            switch (Operation)
+            {
+                // 演算子が+なら
+                case "+":
+                    // 合計値を表示
+                    OperatedNum = FirstNumber + SecondNmber;
+                    textBox1.Text = Convert.ToString(OperatedNum);
+                    break;
+
+                // 演算子が-なら
+                case "-":
+                    OperatedNum = FirstNumber - SecondNmber;
+                    textBox1.Text = Convert.ToString(OperatedNum);
+                    break;
+
+                // 演算子が*なら
+                case "*":
+                    OperatedNum = FirstNumber * SecondNmber;
+                    textBox1.Text = Convert.ToString(OperatedNum);
+                    break;
+
+                // 演算子が/なら
+                case "/":
+                    // 次の数値が0の場合
+                    if (SecondNmber == 0)
+                    {
+                        // エラーメッセージの表示
+                        textBox1.Text = "ゼロで割る事はできません";
+
+                        // エラーメッセージが出た
+                        errorMsg = true;
+                    }
+                    else
+                    {
+                        OperatedNum = FirstNumber / SecondNmber;
+                        textBox1.Text = Convert.ToString(OperatedNum);
+                    }
+                    break;
+
+                // 演算子が^なら
+                case "^":
+                    OperatedNum = System.Math.Pow(FirstNumber, SecondNmber);
+                    textBox1.Text = Convert.ToString(OperatedNum);
+                    // textBox1.Text = Convert.ToString(System.Math.Pow(FirstNumber, SecondNmber));
+                    break;
+
+                // 演算子が%なら
+                case "%":
+                    // 次の数値が0の場合
+                    if (SecondNmber == 0)
+                    {
+                        // エラーメッセージの表示
+                        textBox1.Text = "ゼロで余りは出ません";
+
+                        // エラーメッセージが出た
+                        errorMsg = true;
+                    }
+                    else
+                    {
+                        OperatedNum = FirstNumber % SecondNmber;
+                        textBox1.Text = Convert.ToString(OperatedNum);
+                    }
+                    break;
+            }
+
+            // 入力終了時
+            endPut = true;
+            equalContinu = true;
+            firstNChek = secondNChek = operatedNChek = false;
         }
 
         // 1をクリックした時
@@ -232,13 +345,15 @@ namespace Calculator
             // 表示画面とフラグの初期化
             textBox1.Text = "0";
             InitFlag();
+            FirstNumber = SecondNmber = OperatedNum = 0;
+            firstNChek = secondNChek = operatedNChek = false;
         }
 
         // .をクリックした時
         private void dot_Click(object sender, EventArgs e)
         {
-            // すでに"."が押されていないか確認
-            if (!dotCheck)
+            // すでに"."が押されていないか？数値は既に入っているか？確認
+            if ((!dotCheck && firstNChek) || textBox1.Text == "0")
             {
                 // テキストボックスの右に"."を表示
                 textBox1.Text = textBox1.Text + ".";
@@ -251,79 +366,7 @@ namespace Calculator
         // =をクリックした時
         private void equal_Click(object sender, EventArgs e)
         {
-            // 連続でイコールが押されているか？エラーは出ているか？
-            if (equalContinu && !errorMsg)
-            {
-                // 表示されいる数値をダブル型に変換し最初の数値に代入
-                FirstNumber = Convert.ToDouble(textBox1.Text);
-            }
-            else if (!errorMsg) // エラーが出ているか？
-            {
-                // 表示されいる数値をダブル型に変換し次の数値に代入
-                SecondNmber = Convert.ToDouble(textBox1.Text);
-            }
-
-            switch (Operation)
-            {
-                // 演算子が+なら
-                case "+":
-                    // 合計値を表示
-                    textBox1.Text = Convert.ToString(FirstNumber + SecondNmber);
-                    break;
-
-                // 演算子が-なら
-                case "-":
-                    textBox1.Text = Convert.ToString(FirstNumber - SecondNmber);
-                    break;
-
-                // 演算子が*なら
-                case "*":
-                    textBox1.Text = Convert.ToString(FirstNumber * SecondNmber);
-                    break;
-
-                // 演算子が/なら
-                case "/":
-                    // 次の数値が0の場合
-                    if (SecondNmber == 0)
-                    {
-                        // エラーメッセージの表示
-                        textBox1.Text = "ゼロで割る事はできません";
-
-                        // エラーメッセージが出た
-                        errorMsg = true;
-                    }
-                    else
-                    {
-                        textBox1.Text = Convert.ToString(FirstNumber / SecondNmber);
-                    }
-                    break;
-
-                // 演算子が^なら
-                case "^":
-                    textBox1.Text = Convert.ToString(System.Math.Pow(FirstNumber, SecondNmber));
-                    break;
-
-                // 演算子が%なら
-                case "%":
-                    // 次の数値が0の場合
-                    if (SecondNmber == 0)
-                    {
-                        // エラーメッセージの表示
-                        textBox1.Text = "ゼロで余りは出ません";
-
-                        // エラーメッセージが出た
-                        errorMsg = true;
-                    }
-                    else
-                    {
-                        textBox1.Text = Convert.ToString(FirstNumber % SecondNmber);
-                    }
-                    break;
-            }
-
-            // 入力終了時
-            endPut = true;
-            equalContinu = true;
+            OperatMain();
         }
 
         // !をクリックした時
