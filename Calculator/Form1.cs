@@ -24,7 +24,6 @@ namespace Calculator
         bool transNow = false;  // 透明化フラグ
         bool firstNChek = false; // 最初の数値に値があるか？
         bool secondNChek = false; // 次の数値に値があるか？
-        bool operatedNChek = false; // 最後の数値に値があるか？
 
         public Form1()
         {
@@ -52,6 +51,12 @@ namespace Calculator
             else    // それ以外なら入力中の数値を右に追加
             {
                 textBox1.Text = textBox1.Text + NowNumber;
+            }
+
+            // エラーが出ていたらフラグを下す
+            if(errorMsg)
+            {
+                errorMsg = false;
             }
         }
 
@@ -97,10 +102,22 @@ namespace Calculator
             }
         }
 
+        // 数値と関連フラグを初期化
+        public void ResetNum()
+        {
+            FirstNumber = 0;
+            SecondNmber = 0;
+            OperatedNum = 0;
+            firstNChek = false;
+            secondNChek = false;
+        }
+
         // エラーが出た
         public void ErrorMessage()
         {
             // エラー時のフラグや処理
+            errorMsg = true;
+            ResetNum();
         }
 
         // 演算のメイン
@@ -138,7 +155,7 @@ namespace Calculator
                         textBox1.Text = "ゼロで割る事はできません";
 
                         // エラーメッセージが出た
-                        errorMsg = true;
+                        ErrorMessage();
                     }
                     else
                     {
@@ -163,7 +180,7 @@ namespace Calculator
                         textBox1.Text = "ゼロで余りは出ません";
 
                         // エラーメッセージが出た
-                        errorMsg = true;
+                        ErrorMessage();
                     }
                     else
                     {
@@ -176,7 +193,8 @@ namespace Calculator
             // 入力終了時
             endPut = true;
             equalContinu = true;
-            firstNChek = secondNChek = operatedNChek = false;
+            firstNChek = false;
+            secondNChek = false;
         }
 
         // 1をクリックした時
@@ -345,8 +363,7 @@ namespace Calculator
             // 表示画面とフラグの初期化
             textBox1.Text = "0";
             InitFlag();
-            FirstNumber = SecondNmber = OperatedNum = 0;
-            firstNChek = secondNChek = operatedNChek = false;
+            ResetNum();
         }
 
         // .をクリックした時
